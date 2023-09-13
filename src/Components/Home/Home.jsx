@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 
 import './Home.css'
 import Cart from '../Cart/Cart';
+import swal from 'sweetalert';
 const Home = () => {
  const [allActors,setAllActor]=useState([]);
  const [selectedActors,setSelectedActors]=useState([])
@@ -30,7 +31,7 @@ selectedActors.forEach((item) => {
 const totalRwmaing=20000-count;
 
 if(count>20000){
- return alert('taka shes ');
+  return swal("taka shes", "please re select!", "success");
 }else{
   setTotalCost(count);
 setReming(totalRwmaing);
